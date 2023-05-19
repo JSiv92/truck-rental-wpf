@@ -1,0 +1,166 @@
+﻿<Window x:Class="JonathanDADProjectPartA.Views.HomeForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JonathanDADProjectPartA.Views"
+        mc:Ignorable="d"
+        Title="adminHomeForm" 
+        WindowState="Normal"
+        MinHeight="450" 
+        MinWidth="800" 
+        MaxHeight="1080" 
+        MaxWidth="1920"
+        WindowStartupLocation="CenterScreen"  
+        FontFamily="Bahnschrift SemiBold" 
+        Foreground="NavajoWhite" 
+        FontSize="18">
+    
+    <!--set gradient bg-->
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#37ae5f"/>
+            <GradientStop Color="#1f6135" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+
+        </Grid.RowDefinitions>
+        <Menu Name="adminMenu" 
+              VerticalAlignment="Center"
+              HorizontalAlignment="Center"
+              Grid.Column="0"
+              Grid.Row="0"
+              Grid.ColumnSpan="4" 
+              FontSize="30"
+              FontFamily="Bahnschrift SemiBold"
+              Background="#37ae5f"
+              Foreground="NavajoWhite"
+              >
+            <!--nested customer management-->
+            <MenuItem Name="employeeManagementMenuItem"
+                      Header="People |"
+                      >
+                <MenuItem Name="addEmpMenuItem"
+                          Click="addEmpMenuItem_Click"
+                          Header="Add Employee" 
+                          Background="#1f6135" 
+                          BorderThickness="0"
+                          BorderBrush="Transparent"
+                          FontSize="20"/>
+                <MenuItem Name="searchEmpMenuItem"
+                          Click="searchEmpMenuItem_Click"
+                          Header="Search Person"
+                          Background="#1f6135"
+                          BorderThickness="0"
+                          BorderBrush="Transparent"
+                          FontSize="20"/>
+                <MenuItem Name="updateEmpMenuItem"
+                          Click="updateEmpMenuItem_Click"
+                          Header="View and Update Employees"
+                          Background="#1f6135"
+                          BorderThickness="0"
+                          BorderBrush="Transparent"
+                          FontSize="20"/>
+                <MenuItem Name="updateCustMenuItem"
+                          Click="updateCustMenuItem_Click"
+                          Header="View and Update Customers"
+                          Background="#1f6135"
+                          BorderThickness="0"
+                          BorderBrush="Transparent"
+                          FontSize="20"/>
+                <MenuItem Name="updateEmpProfileMenuItem"
+                          Click="updateEmpProfileMenuItem_Click"
+                          Header="My Profile"
+                          Background="#1f6135"
+                          BorderThickness="0"
+                          BorderBrush="Transparent"
+                          FontSize="20"/>
+            </MenuItem>
+            
+            <!--Stock Management-->
+            <MenuItem Name="stockManagementMenuItem"
+                      Header="Stock |">
+            </MenuItem>
+            <!--Rental Management-->
+            <MenuItem Name="rentalManagementMenuItem"
+                      Header="Rentals">
+            </MenuItem>
+        </Menu>
+
+        <!--grid for UC-->
+        <Grid Name="centerPanel"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="4"
+                    Grid.RowSpan="5"
+                    Background="NavajoWhite">
+            <!--user profile grid-->
+            <DataGrid Name="grid"></DataGrid>
+        </Grid>
+        
+        <!--logout button-->
+        <Button Name="logoutBtn"
+                Grid.Row="6"
+                Grid.Column="5"
+                Margin="10,20,10,20"
+                Content="LOGOUT"
+                Click="logoutBtn_Click"/>
+            
+        <!--company logo-->
+        <Image x:Name="logo" 
+               Grid.Column="0"
+               Grid.Row="6"
+               Height="50"
+               Width="200"
+               Source="/Images/mikesTruckLogo.png" 
+               Stretch="Uniform"/>
+
+        <!--access level label-->
+        <TextBlock Text="Access Level:"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Padding="10"/>
+
+        <!--denotes whether user is admin or staff-->
+        <TextBlock Name ="adminLabel" Text=" ADMIN "
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Background="Red"
+                   HorizontalAlignment="Stretch"
+                   TextAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Visibility="Visible"
+                   Margin="0,0,0,10"
+                   />
+
+        <TextBlock Name ="staffLabel" Text=" STAFF "
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Background="Blue"
+                   HorizontalAlignment="Stretch"
+                   TextAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,0,10"
+                   Visibility="Hidden"
+                   />
+        
+
+    </Grid>
+</Window>

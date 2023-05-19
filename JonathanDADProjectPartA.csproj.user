@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\addEmployeeUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\HomeForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\myProfileUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\searchByIdUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewUpdateCustsUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ViewUpdateEmpsUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\addEmployeeUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HomeForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\myProfileUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\searchByIdUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewUpdateCustsUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ViewUpdateEmpsUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

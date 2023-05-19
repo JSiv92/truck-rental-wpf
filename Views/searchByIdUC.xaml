@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="JonathanDADProjectPartA.Views.searchByIdUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JonathanDADProjectPartA.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" 
+             d:DesignWidth="800" 
+             Background="NavajoWhite" 
+             Grid.IsSharedSizeScope="True"
+             FontSize="15"
+             FontFamily="Bahnschrift SemiBold" 
+             Foreground="#1f6135"
+             Padding="15">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Search By ID:"
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+                   />
+        <Label Content="Name:"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+                   />
+        <Label Content="Address:"
+               Grid.Row="2"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               />
+        <Label Content="Telephone:"
+               Grid.Row="3"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               />
+        <TextBox Name="nameSearchTextBox"
+                 Grid.Row="1"
+                 Grid.Column="2"
+                 VerticalContentAlignment="Center" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center"
+                 />
+        <TextBox Name="addressSearchTextBox"
+                 Grid.Row="2"
+                 Grid.Column="2"
+                 VerticalContentAlignment="Center" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center"
+                 />
+        <TextBox Name="telephoneSearchTextBox"
+                 Grid.Row="3"
+                 Grid.Column="2"
+                 VerticalContentAlignment="Center"
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Center"
+                 />
+
+        <!--search field-->
+        <TextBox Name="searchIDTextBox"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Center"  
+                 VerticalContentAlignment="Center"
+                 Margin="60,0,60,0"
+                 />
+        <!--search btn-->
+        <Button Name="searchIDBtn"
+                Content="SEARCH"
+                Grid.Row="0"
+                Grid.Column="3"
+                HorizontalAlignment="Center"           
+                VerticalAlignment="Center"  
+                VerticalContentAlignment="Center" Click="searchIDBtn_Click"
+                />
+        
+
+
+    </Grid>
+</UserControl>

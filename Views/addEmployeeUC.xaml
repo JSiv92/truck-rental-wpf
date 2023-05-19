@@ -1,0 +1,167 @@
+﻿<UserControl x:Class="JonathanDADProjectPartA.Views.addEmployeeUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JonathanDADProjectPartA.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" 
+             d:DesignWidth="800" 
+             Background="NavajoWhite" 
+             Grid.IsSharedSizeScope="True"
+             FontSize="15"
+             FontFamily="Bahnschrift SemiBold" 
+             Foreground="#1f6135"
+             Padding="15">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        
+        <!--labels and textboxes-->
+        <Label Content="Enter Employee Name: "     
+               Grid.Row="0"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Enter Employee Address: "     
+               Grid.Row="1"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Enter Employee Telephone: "     
+               Grid.Row="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Select Office Address: "     
+               Grid.Row="1"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Enter Telephone Ext #: "     
+               Grid.Row="0"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Select Role: "     
+               Grid.Row="2"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Enter Employee Username: "     
+               Grid.Row="3"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        <Label Content="Enter Employee Password: "     
+               Grid.Row="3"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Bottom"
+               />
+        
+        <TextBox Name="empNameTextBox" 
+                 Grid.Column="1" 
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Bottom"
+                 VerticalContentAlignment="Center"
+                 
+                 />
+        <TextBox Name="empAddressTextBox" 
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Bottom" 
+                 VerticalContentAlignment="Center"
+                 
+                 />
+        <TextBox Name="empPhoneTextBox" 
+                 Grid.Column="1"
+                 Grid.Row="2"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Bottom" 
+                 VerticalContentAlignment="Center"
+                 
+                 />
+        <TextBox Name="empExtTextBox" 
+                 Grid.Column="3"
+                 Grid.Row="0"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Bottom"  
+                 VerticalContentAlignment="Center"
+                 
+                 />
+
+        <ComboBox Name="empOfficeComboBox" 
+                  Grid.Column="3"
+                  Grid.Row="1"
+                  HorizontalAlignment="Stretch"           
+                  VerticalAlignment="Bottom"  
+                  VerticalContentAlignment="Center"
+                  >
+            <ComboBoxItem Content="Howick"/>
+            <ComboBoxItem Content="Ormiston"/>
+            <ComboBoxItem Content="Pakuranga"/>
+        </ComboBox>
+
+        <ComboBox Name="empRoleComboBox" 
+                   Grid.Column="3"
+                   Grid.Row="2"
+                   HorizontalAlignment="Stretch"           
+                   VerticalAlignment="Bottom"
+                   VerticalContentAlignment="Center"
+                   >
+            <ComboBoxItem Content="Staff"/>
+            <ComboBoxItem Content="Admin"/>
+        </ComboBox>
+
+        <TextBox Name="empUsernameTextBox" 
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Bottom" 
+                 VerticalContentAlignment="Center"
+                 />
+        <TextBox Name="empPasswordTextBox" 
+                 Grid.Column="3"
+                 Grid.Row="3"
+                 HorizontalAlignment="Stretch"           
+                 VerticalAlignment="Bottom" 
+                 VerticalContentAlignment="Center"
+                 />
+
+        <!--add button-->
+        <Button Name="addEmpBtn"               
+                Content="Add Employee" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Grid.Row="4"
+                Grid.Column="3"
+                FontSize="20" 
+                Click="addEmpBtn_Click"
+                />
+        
+        <TextBlock Name="activityLabel"
+                   Text="Add Employee"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>
